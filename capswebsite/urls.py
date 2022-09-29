@@ -6,5 +6,14 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('login',views.loginPage, name="login")
+    path('login',views.loginPage, name="login"),
+    path('sign_up',views.sign_upPage, name="sign_up"),
+    path('evaluation',views.evaluation, name="evaluation"),
+    path('student_list',views.student_list, name="student_list"),
+    path('student_answer',views.student_answer, name="student_answer"),
+    path('answer_summary',views.answer_summary, name="answer_summary"),
+    path('start_survey',views.start_survey, name="start_survey"),
+    path('survey_question',views.survey_question, name="survey_question")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
