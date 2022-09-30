@@ -39,10 +39,6 @@
         font-size: 1em;
     }
 
-    .container{
-        /* background-color: pink; */
-    }
-
     .btn-lg {
         width: 161.72px;
         height: 37.33px;
@@ -100,11 +96,11 @@
 
 <br><br><br>
 
-<div class="container">
-    <a href="#">
-        <button class="btn btn-primary btn-lg">Start Survey</button>
-    </a>
-</div>
+
+<a href="{% url 'survey_question' %}">
+    <button class="btn btn-primary btn-lg">Start Survey</button>
+</a>
+
 
 <img src="{% static 'image/tree-saly.png' %}" class="tree-saly">
 

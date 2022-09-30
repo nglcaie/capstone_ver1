@@ -20,11 +20,11 @@
         <p class="hello">Hello, Student {stud_no}!</p>
         <div class="nav-bar-2-right"></div>
             <ul>
-                <li><a href="#"> Evaluation </a></li>
-                <li><a href="#"> Summary of Answers </a></li>
+                <li><a href="{% url 'start_survey' %}"> Evaluation </a></li>
+                <li><a href="{% url 'answer_summary' %}"> Summary of Answers </a></li>
             </ul>
 
-            <a href="#">
+            <a href="{% url 'login' %}">
                 <button class="btn-logout"><img src="{% static 'image/logout-icon.png' %}" height="12em">&nbsp; Log-out</button>
             </a>
         </div>

@@ -16,5 +16,3 @@ urlpatterns = [
     path('survey_question',views.survey_question, name="survey_question"),
     path('student_navbar',views.student_navbar, name="student-navbar")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
