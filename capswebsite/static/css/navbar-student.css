@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@800&family=Inknut+Antiqua&family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@800&family=Inknut+Antiqua&family=Inter:wght@400;700&display=swap');
 body{
     margin:0px;
     width: 100;
@@ -9,15 +8,59 @@ body{
 .nav-bar-1{
     height: 3em;
     display: flex;
+    align-items: center;
     background-color: #B4DADB;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    align-items: center;
+    
 }
 
 .nav-bar-2{
     background: #92C4C6;
-    height: 3em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
 }
+
+.hello{
+    margin: 0%;
+    padding-left: 1em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    
+}
+
+.right-nav{
+    margin: 0em;
+    display: block;
+    float: right;
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  li a:hover {
+    background-color: #84B3B5;;
+  }
