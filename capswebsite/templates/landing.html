@@ -5,14 +5,36 @@
 <title>Landing Page</title>
 </head>
 
+
+<style>
+    body{
+        margin:0px;
+    }
+    
+    .nav-bar{
+        background-color: aqua;
+        height: 3em;
+    }
+
+    .try-em{
+        font-size: 1.5em;
+    }
+
+    .login-btn{
+        padding: 1em 2em;
+    }
+</style>
+
 <body>
 
+<div class="nav-bar">
+    <p class="try-em">Hello sana gumana ka</p>
+    <button class="login-btn">Log in</button>
+</div>
 
-{% block content %}
+    hello, this is just a landing page    <a href="{% url 'login' %}"> login  </a> <br>  
+    <img src="{% static 'image/unknown.png' %}">
 
-hello, this is just a landing page    <a href="{% url 'login' %}"> login  </a> <br>  
-<img src="{% static 'image/unknown.png' %}">
 
-{% endblock %}
 </body>
 </html>
