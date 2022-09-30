@@ -29,3 +29,6 @@ def start_survey(request):
 
 def survey_question(request):
     return render(request, 'student/survey_question.html')
+
+def student_navbar(request):
+    return render(request, 'student/student-navbar.html')
