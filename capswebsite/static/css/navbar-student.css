@@ -8,11 +8,16 @@ body{
 
 .nav-bar-1{
     height: 3em;
+    display: flex;
     background-color: #B4DADB;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    display: flex;
     align-items: center;
+}
+
+.nav-bar-2{
+    background: #92C4C6;
+    height: 3em;
 }
