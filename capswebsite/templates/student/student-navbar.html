@@ -18,12 +18,17 @@
     </div>
     <div class="nav-bar-2">
         <p class="hello">Hello, Student {stud_no}!</p>
-        <ul class="right-nav">
-            <li><a href="#"> Evaluation </a></li>
-            <li><a href="#"> Summary of Answers </a></li>
-        </ul>
+        <div class="nav-bar-2-right"></div>
+            <ul>
+                <li><a href="#"> Evaluation </a></li>
+                <li><a href="#"> Summary of Answers </a></li>
+            </ul>
 
-        <button class="logout"><img src="{% static 'image/logout-icon.png' %}"> Log-out</button>
+            
+            <a href="#">
+                <button class="logout"><img src="{% static 'image/logout-icon.png' %}" height="12em">&nbsp; Log-out</button>
+            </a>
+        </div>
     </div>
 
     {% block content %}
