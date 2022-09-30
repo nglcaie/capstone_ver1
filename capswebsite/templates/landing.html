@@ -26,11 +26,11 @@
     .container {
         display: table;
         width: 100%;
+        height: 100%;
     }
 
-
+/* LEFT HALF */
     .left-half {
-        background-color: lavender;
         position: absolute;
         left: 0px;
         width: 50%;
@@ -61,12 +61,6 @@
         border: 10px solid #D5A106;
     }
 
-    .right-half{
-        background-color: pink;
-        position: absolute;
-        right: 0px;
-        width: 50%;
-    }
 
     .login-btn{
         padding: 1em 2em;
@@ -80,60 +74,106 @@
         top: 109px;
 
     }
+
+    .lorem-ipsum{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+
+        color: #404040;
+    }
+
+
+
+/* RIGHT HALF */
+    .right-half{
+        position: absolute;
+        right: 0px;
+        width: 50%;
+    }
+
     .brain{
+        position: absolute;
         left: 54.38%;
         right: 9.45%;
-        top: 87.92%;
+        top: 77.92%;
         bottom: 17.78%;
     }
+
+    .blue-pill{
+        position: absolute;
+        width: 172px;
+        height: 174px;
+        left: 713px;
+        top: 144px;
+    }
+    .violet-cell{
+        position: absolute;
+        width: 135px;
+        height: 136px;
+        left: 316px;
+        top: 487px;
+
+    }
+    .yellow-cell{
+        position: relative;
+        width: 179px;
+        height: 179px;
+        left: 716px;
+        top: 457px;
+        
+
+    }
+
+    
+    
 </style>
 
 
 
 <body>
     <section class="container">
-        <div class="left-half" >
-            <p class="try-em">
-                <img src="{% static 'image/landing-plm-logo.png' %}" class="logo"><br>
-                <hr class="horizontal-gold"> 
+        <div class="left-half">
+            <img src="{% static 'image/landing-plm-logo.png' %}" class="logo"><br>
 
-<div class="nav-bar">
-    <div>
-        <p class="try-em">Hello sana gumana ka</p>
-    </div>
-    <div>
-        <button class="login-btn">Log in</button>
-    </div>
-</div>
-    
+            <p class="text-em"> Mental Health <br><br><br> Survey</p>  <br>
+            <p class="lorem-ipsum"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <br>
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum  </p>
+            
 
-                <!-- gold horizontal line -->
-
-                <p class="text-em"> Mental Health <br><br><br> Survey</p> </p>
-            </p>
-
-
-
-            <div>  <!-- button -->
-                <a href="{% url 'login' %}"> login  </a> <br>  
-            </div>
         </div>
+
+        <!-- <p class="lorem-ipsum"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <br>
+            Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum  </p> -->
+
+
+
+            <!-- <div>
+                <a href="{% url 'login' %}"> login  </a> <br>  
+            </div> -->
+        
 
             
         <div class="right-half">
             <img src="{% static 'image/brain.png' %}" class="brain"><br>
+            <img src="{% static 'image/pill-blue.png' %}" class="blue-pill"><br>
+            <img src="{% static 'image/cell-yellow.png' %}" class="yellow-cell"><br>
+            <img src="{% static 'image/cell-violet.png' %}" class="violet-cell"><br>
             
+
         </div>
 
 
 
-</section>
+    </section>
 
 
 
     
-    
->>>>>>> main
 
 
 </body>
