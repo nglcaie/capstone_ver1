@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@800&family=Inknut+Antiqua&family=Inter&display=swap');
+
+body{
+    margin:0px;
+    width: 100;
+    height: auto;
+}
+
+.nav-bar-1{
+    height: 3em;
+    background-color: #B4DADB;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
