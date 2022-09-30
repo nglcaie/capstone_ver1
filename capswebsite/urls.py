@@ -13,7 +13,8 @@ urlpatterns = [
     path('student_answer',views.student_answer, name="student_answer"),
     path('answer_summary',views.answer_summary, name="answer_summary"),
     path('start_survey',views.start_survey, name="start_survey"),
-    path('survey_question',views.survey_question, name="survey_question")
+    path('survey_question',views.survey_question, name="survey_question"),
+    path('student_navbar',views.student_navbar, name="student-navbar")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
