@@ -30,19 +30,19 @@
         top: 44px;
     }
 
-    .container-login{
-        
+    .container-login {
         width: 400px;
         height: 427px;
-        margin-top: 46px;
+        margin-top: -426px;
         margin-left: 500px;
-
-
         background: #FFFFFF;
         box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.1);
         border-radius: 43px;
+
+        align-items: center;
     }
-    .text-em{
+
+    .text-em {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
@@ -53,13 +53,110 @@
         color: #404040;
     }
 
-   
+    input[type=text] {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        width: 282.43px;
+        height: 28px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        margin-left: 60px;
+
+        background: #D9D9D9;
+        border-radius: 5px;
+        border: none;
+        color: #8F8F8F;
+    }
+
+    input[type=tel] {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        width: 282.43px;
+        height: 28px;
+        padding: 12px 20px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        margin-left: 60px;
+
+        background: #D9D9D9;
+        border-radius: 5px;
+        border: none;
+        color: #8F8F8F;
+    }
+
+    .btn-lg {
+        width: 161.72px;
+        height: 37.33px;
+        color: white;
+
+        margin-left: 110px;
+        margin-top: 10px;
+  
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+
+        background: #42CBCE;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .btn-lg:hover {
+        background-color: #92C4C6;
+    }
+
+    .sign-up {
+        font-family: 'Inter';
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;  
+        margin-left: 60px;
+        margin-top: -20px;;
+    }
+
+    a {
+        text-decoration: none;
+        color: #42CBCE;
+    }
+
+    .blue-pill{
+        margin-left: 243px;
+        margin-top: 196.69px;
+    }
+    .violet-cell{
+        width: 105px;
+        height: 106px;
+        margin-left: 1009px;
+        margin-top: 16.54px;
+    }
+
 
 
 </style>
 
 
 <body>
+
+    <div class="images">
+        <img src="{% static 'image/pill-blue-2.png' %}" style="width:132px; height:134px;" class="blue-pill" >
+        <img src="{% static 'image/cell-violet-2.png' %}" style="width:132px; height:134px;" class="violet-cell" >
+
+    
+    </div>
     <div class="header">
         <img src="{% static 'image/mental_header.png' %}" style="width:489px;height:111px;">
     </div>
@@ -69,14 +166,19 @@
     <br>
 
     <div class="container-login">
-        <br><p class="text-em"> REGISTER </p><br>
+        <br>
+        <p class="text-em"> REGISTER </p><br>
         <form>
-            <input type="text" id="email" name="email"value="Email"><br>
-            <input type="number" id="lname" name="lname" value="Student Number"><br>
+            <input type="text" id="email" name="email" value="Email"><br>
+            <input type="tel" id="lname" name="lname" value="Student No. (Ex. 201900000)"><br>
             <input type="text" id="college" name="college" value="College"><br>
             <input type="text" id="course" name="course" value="Course"><br>
-          </form>
-        
+        </form>
+
+        <p class="sign-up"> Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
+        <a href="{% url 'login' %}">
+            <button class="btn btn-primary btn-lg">LOG IN</button>
+        </a>
 
     </div>
 
