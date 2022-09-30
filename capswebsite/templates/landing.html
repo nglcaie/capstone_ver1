@@ -2,15 +2,15 @@
 <html>
 
 <head>
-<title>Landing Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,100&family=Cedarville+Cursive&family=Cormorant+Garamond:wght@300&family=Inter:wght@100;200;700&family=Nunito:wght@400;500;600;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,100&family=Cedarville+Cursive&family=Cormorant+Garamond:wght@300&family=Inter:wght@100;200;400;500;700&family=Nunito:wght@400;500;600;800&display=swap');
 
-    body{
-        margin:0px;
+    body {
+        margin: 0px;
         position: relative;
         width: 1280px;
         height: 720px;
@@ -22,27 +22,27 @@
     .section {
         text-align: center;
     }
-    
+
     .container {
         display: table;
         width: 100%;
         height: 100%;
     }
 
-/* LEFT HALF */
+    /* LEFT HALF */
     .left-half {
         position: absolute;
         left: 0px;
         width: 50%;
     }
 
-    .text-em{
+    .text-em {
         position: absolute;
         width: 477px;
         height: 9.375em;
         left: 109px;
         top: 266px;
-        
+
         font-family: 'Inter', sans-serif;
         font-size: 4em;
         height: 3.87em;
@@ -52,51 +52,91 @@
         font-weight: 700;
     }
 
-    hr.horizontal-gold{
+    hr.horizontal-gold {
         position: absolute;
         width: 86px;
         left: 109px;
-        top: 193px;
+        top: 213px;
 
-        border: 10px solid #D5A106;
+        border: 5px solid #D5A106;
     }
 
 
-    .login-btn{
+    .login-btn {
         padding: 1em 2em;
     }
 
-    .logo{
+    .logo {
         position: absolute;
-        width: 5.375em;
-        height: 5.375em;
-        left: 109px;
+        width: 7.375em;
+        height: 7.375em;
+        left: 99px;
         top: 109px;
 
     }
 
-    .lorem-ipsum{
+    .lorem-ipsum {
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        display: flex;
-        align-items: center;
+        margin-top: 500px;
+        margin-left: 100px;
 
         color: #404040;
     }
 
+    .button {
+        position: absolute;
+        
+        height: 37.33px;
+        left: 99px;
+        top: 584px;
+
+    }
+
+    .btn-lg {
+        width: 161.72px;
+        height: 37.33px;
+        color: white;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+
+        background: #42CBCE;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .btn-lg:hover {
+        background-color: #92C4C6;
+    }
+
+    .sign-up{
+        font-family: 'Inter';
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
 
 
-/****** RIGHT HALF */
-    .right-half{
+
+
+    /****** RIGHT HALF */
+    .right-half {
         position: absolute;
         right: 0px;
         width: 50%;
+        margin-top: -550px;
     }
 
-    .brain{
+    .brain {
         position: absolute;
         left: 54.38%;
         right: 9.45%;
@@ -104,14 +144,15 @@
         bottom: 17.78%;
     }
 
-    .blue-pill{
+    .blue-pill {
         position: absolute;
         width: 172px;
         height: 174px;
         left: 713px;
         top: 144px;
     }
-    .violet-cell{
+
+    .violet-cell {
         position: absolute;
         width: 135px;
         height: 136px;
@@ -119,52 +160,51 @@
         top: 487px;
 
     }
-    .yellow-cell{
+
+    .yellow-cell {
         position: relative;
         width: 179px;
         height: 179px;
         left: 716px;
         top: 457px;
-        
+
 
     }
-
-    
-    
 </style>
 
 
 
 <body>
     <section class="container">
+        <!---------------- LEFT HALF ---------------->
         <div class="left-half">
             <img src="{% static 'image/landing-plm-logo.png' %}" class="logo"><br>
-
-            <p class="text-em"> Mental Health <br><br><br> Survey</p>  <br>
-            <p class="lorem-ipsum"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <br>
-                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum  </p>
-            
-
+            <hr class="horizontal-gold">
+            <p class="text-em"> Mental Health <br><br><br> Survey</p> <br>
         </div>
 
-        <!-- <p class="lorem-ipsum"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <br>
-            Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum  </p> -->
+        <div class="lorem">
+            <p class="lorem-ipsum"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <br>
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+        </div>
 
+        <div class="button">
+            <a href="{% url 'login' %}">
+                <button class="btn btn-primary btn-lg">LOG IN</button>
+            </a>
+            <p class="sign-up"> Don’t have an account? <font color=#42CBCE> Sign up here </font> </p>
+            
+        </div>
 
-
-            <!-- <div>
-                <a href="{% url 'login' %}"> login  </a> <br>  
-            </div> -->
         
 
-            
+
+        <!---------------- RIGHT HALF ---------------->
         <div class="right-half">
             <img src="{% static 'image/brain.png' %}" class="brain"><br>
             <img src="{% static 'image/pill-blue.png' %}" class="blue-pill"><br>
             <img src="{% static 'image/cell-yellow.png' %}" class="yellow-cell"><br>
             <img src="{% static 'image/cell-violet.png' %}" class="violet-cell"><br>
-            
-
         </div>
 
 
@@ -173,10 +213,11 @@
 
 
 
-    
-    
+
+
 
 
 
 </body>
+
 </html>
