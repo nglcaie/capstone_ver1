@@ -3,14 +3,14 @@
 {% include 'student/student-navbar.html' %}
 
 <style>
-    body{
+    body {
         margin: 0px;
         min-height: 100vh;
         background: linear-gradient(153.3deg, #FCFBFE 61.32%, #D8F2F2 106.14%);
         overflow-y: hidden;
     }
-    
-    .date-time{
+
+    .date-time {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -20,7 +20,7 @@
         margin-right: 2em;
     }
 
-    .title{
+    .title {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
@@ -31,7 +31,7 @@
         color: #404040;
     }
 
-    .description{
+    .description {
         text-align: center;
         font-family: 'Inter';
         font-style: normal;
@@ -39,7 +39,11 @@
         font-size: 1em;
     }
 
-    .btn-start-survey {
+    .container{
+        /* background-color: pink; */
+    }
+
+    .btn-lg {
         width: 161.72px;
         height: 37.33px;
         color: white;
@@ -53,17 +57,20 @@
         border-radius: 10px;
         border: none;
         cursor: pointer;
-        margin:auto;
-        display:block;
-        text-decoration: none;
+        margin: auto;
+        display: block;
     }
 
-    .btn-start-survey:hover {
+    .btn-lg:hover {
         background-color: #92C4C6;
-        text-decoration: none;
     }
 
-    .tree-saly{
+    a{
+        text-decoration: none;
+        color: #42CBCE;
+    }
+
+    .tree-saly {
         position: absolute;
         width: 474px;
         height: 474px;
@@ -93,9 +100,11 @@
 
 <br><br><br>
 
-<a href="#">
-    <button class="btn-start-survey">Start Survey</button>
-</a>
+<div class="container">
+    <a href="#">
+        <button class="btn btn-primary btn-lg">Start Survey</button>
+    </a>
+</div>
 
 <img src="{% static 'image/tree-saly.png' %}" class="tree-saly">
 
