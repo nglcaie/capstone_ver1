@@ -158,7 +158,9 @@
     
     </div>
     <div class="header">
-        <img src="{% static 'image/mental_header.png' %}" style="width:489px;height:111px;">
+        <a href="{% url 'login' %}">
+            <img src="{% static 'image/mental_header.png' %}" style="width:489px;height:111px;">
+        </a>
     </div>
     <br>
     <br>
@@ -169,24 +171,18 @@
         <br>
         <p class="text-em"> REGISTER </p>
         <form>
-            <input type="text" id="email" name="email" value="Email"><br>
-            <input type="tel" id="lname" name="lname" value="Student No. (Ex. 201900000)"><br>
-            <input type="text" id="college" name="college" value="College"><br>
-            <input type="text" id="course" name="course" value="Course"><br>
+            <input type="text" id="email" name="email" placeholder="Email"><br>
+            <input type="tel" id="lname" name="lname" placeholder="Student No. (Ex. 201900000)"><br>
+            <input type="text" id="college" name="college" placeholder="College"><br>
+            <input type="text" id="course" name="course" placeholder="Course"><br>
         </form>
 
-        <p class="sign-up"> Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
-        <a href="{% url 'login' %}">
+        <p class="sign-up" style="color: #8F8F8F;"> Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
+        <a href="{% url 'start_survey' %}">
             <button class="btn btn-primary btn-lg">LOG IN</button>
         </a>
 
     </div>
 
-
-
-
-
-
 </body>
-
 </html>
