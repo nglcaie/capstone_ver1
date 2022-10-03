@@ -2,6 +2,56 @@
 
 {% include 'student/student-navbar.html' %}
 
-Survey Question
+<style>
+    .body {
+        margin: 0px;
+        min-height: 100vh;
+        background: linear-gradient(155.57deg, #FDFBFE 36.97%, #D8F2F2 83.32%);
+    }
+    
+    .title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+
+        color: #404040;
+    }
+
+    .qna {
+        display: flex;
+        min-width: 100px;
+        max-width: 55%;
+        padding: 40px;
+        margin: 0 auto;
+
+        background: #FFFFFF;
+        box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+</style>
+
+<div class="title">Survey Questionnaire</div>
+
+<div class="qna">
+    <b>Question #1</b>
+    <br><br>
+    1. How does your environment affect your studying?
+
+
+</div>
+
+
+
+
+
 
 <a href="{% url 'thankyou' %}">submit</a>
