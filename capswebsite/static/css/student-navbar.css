@@ -12,6 +12,8 @@ body{
     text-align: center;
     align-items: center;
     display: flex;
+    place-items: center;
+    place-content: center;
 
     font-family: 'Inter';
     font-style: normal;
