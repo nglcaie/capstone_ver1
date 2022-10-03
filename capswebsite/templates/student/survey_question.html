@@ -7,6 +7,7 @@
         margin: 0px;
         min-height: 100vh;
         background: linear-gradient(155.57deg, #FDFBFE 36.97%, #D8F2F2 83.32%);
+        display: flex;
     }
     
     .title {
@@ -15,18 +16,18 @@
         font-weight: 700;
         font-size: 2em;
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1.5em;
+        margin-top: 2em;
 
         color: #404040;
     }
 
     .qna {
-        display: flex;
+        display: block;
         min-width: 100px;
         max-width: 55%;
+        height: auto;
         padding: 40px;
-        margin: 0 auto;
+        margin: 80px auto;
 
         background: #FFFFFF;
         box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.1);
@@ -37,17 +38,124 @@
         font-weight: 400;
         font-size: 16px;
     }
+
+    .qna span {
+        font-family:'Inter';  
+        font-size: 20px;
+        font-weight: 700;
+        /* display: contents; */
+    }
+
+    textarea {  
+        font-family:'Inter';  
+        font-size: 14px;
+        resize: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .submit-btn {
+        width: 200px;
+        height: 45px;
+        color: white;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+
+        background: #42CBCE;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin: auto;
+        display: block;
+    }
+
+    .submit-btn:hover {
+        background-color: #92C4C6;
+    }
+
+    a{
+        text-decoration: none;
+        color: #42CBCE;
+    }
 </style>
 
 <div class="title">Survey Questionnaire</div>
+    <form action="#">
 
-<div class="qna">
-    <b>Question #1</b>
-    <br><br>
-    1. How does your environment affect your studying?
+        <!-- Question 1 -->
+        <div class="qna"> 
+            
+            <span>Question #1</span>
+            <br><br>
+            1. How does your environment affect your studying?
+            <br><br><br><br>
+            
+            <label for="answer">Answer:</label>
+            <br><br>
+            <textarea id="answer" rows="3" cols="80" placeholder="Share your experience" required minlength="20"></textarea>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="qna"> 
+            
+            <span>Question #2</span>
+            <br><br>
+            2. How do you feel about the workload that is given to you during online classes?
+            <br><br><br><br>
+            
+            <label for="answer">Answer:</label>
+            <br><br>
+            <textarea id="answer" rows="3" cols="80" placeholder="Share your experience" required minlength="20"></textarea>
+        </div>
 
+        <!-- Question 3 -->
+        <div class="qna"> 
+            
+            <span>Question #3</span>
+            <br><br>
+            3. What can you say about your physical health in relation to online learning? (Sleep quality, physical activity, feelings of mental or physical fatigue, etc.)
+            <br><br><br><br>
+            
+            <label for="answer">Answer:</label>
+            <br><br>
+            <textarea id="answer" rows="3" cols="80" placeholder="Share your experience" required minlength="20"></textarea>
+        </div>
 
+        <!-- Question 4 -->
+        <div class="qna"> 
+            
+            <span>Question #4</span>
+            <br><br>
+            4. Can you say that your motivation decreased in an online set-up? If yes, how?
+            <br><br><br><br>
+            
+            <label for="answer">Answer:</label>
+            <br><br>
+            <textarea id="answer" rows="3" cols="80" placeholder="Share your experience" required minlength="20"></textarea>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="qna"> 
+            
+            <span>Question #5</span>
+            <br><br>
+            5. How do you think your socioeconomic status affects your mental health during online class?
+            <br><br><br><br>
+            
+            <label for="answer">Answer:</label>
+            <br><br>
+            <textarea id="answer" rows="3" cols="80" placeholder="Share your experience" required minlength="20"></textarea>
+        </div>
+
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
 </div>
+
+<br><br><br><br>
 
 
 
