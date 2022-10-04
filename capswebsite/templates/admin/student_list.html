@@ -3,6 +3,13 @@
 {% include 'admin/admin_navbar.html' %}
 
 <style>
+    body {
+        margin: 0px;
+        min-height: 100vh;
+        background: linear-gradient(153.3deg, #FCFBFE 61.32%, #D8F2F2 106.14%);
+        background-repeat: no-repeat;
+    }
+
     .date-time {
         font-family: 'Inter';
         font-style: normal;
@@ -19,30 +26,38 @@
         min-height: 270px;
     }
 
-    input[type=text] {
-    padding: 6px;
-    border: none;
-    margin: 0px;
-    background: #f6f6f6;
+    /* .top-row{
+        display: inline-block;
+    } */
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    input[type=text] {
+        padding: 6px;
+        border: none;
+        margin: 0px;
+        background: #f6f6f6;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
     }
     
     .search-container button {
-    padding: 6px 10px;
-    background: #f6f6f6;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    margin: 0px;
-    color: gray;
+        padding: 6px 10px;
+        background: #f6f6f6;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        color: gray;
     }
 
     .search-container button:hover {
     background: #ccc;
+    }
+
+    .dl-csv{
+        position: relative;
     }
 </style>
 
@@ -57,6 +72,9 @@
               <input type="text" placeholder="Search" name="search">
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
+        </div>
+        <div class="dl-csv">
+            <button class="dl-btn"> Download CSV </button>
         </div>
     </div>
     Student Answers
