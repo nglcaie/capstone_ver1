@@ -1,4 +1,3 @@
-
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.core.validators import RegexValidator
@@ -9,6 +8,18 @@ import os, random
 from django.utils.html import mark_safe
  
 # Create your models here.
+class College(models.Model):
+    college = models.CharField(max_length=100, verbose_name="College",unique=True,null=True, blank =True)
+ 
+    def __str__(self):
+        return f"{self.college}"
+ 
+class Course(models.Model):
+    college = models.ForeignKey(College, verbose_name='College',null=True,blank=True,on_delete=models.CASCADE)
+    course = models.CharField(max_length=100, verbose_name="Course",unique=True,null=True, blank =True)
+ 
+    def __str__(self):
+        return f"{self.course}"
  
 class UserManager(BaseUserManager):
     def create_user(self,email, password=None):
@@ -47,8 +58,20 @@ class User(AbstractBaseUser):
         regex=r'^20\d{7}$',
         message=ID_error_message
     )
+    Year_CHOICES = (
+        ('1', '1'),
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+    )
     email = models.EmailField(verbose_name="Email",max_length=60,unique=True,validators=[email_regex])
-    numberID = models.CharField(validators=[ID_regex], max_length=50,unique=True, verbose_name='Number ID', null=True)
+    numberID = models.IntegerField(validators=[ID_regex],unique=True, verbose_name='Number ID', null=True)
+    college= models.ForeignKey(College, verbose_name='College',null=True,blank=True,on_delete=models.CASCADE)
+    course= models.ForeignKey(Course, verbose_name='Course',null=True,blank=True,on_delete=models.CASCADE)
+    year = models.CharField(max_length=10, choices=Year_CHOICES, verbose_name='Year', null=True,blank=True)
+    block = models.IntegerField(verbose_name='Block', null=True,blank=True)
     is_active = models.BooleanField(default=True)
     date_of_inactive = models.DateTimeField(verbose_name="Date of Inacitve",null=True,blank=True)
     is_student = models.BooleanField(default=False, verbose_name='Student')

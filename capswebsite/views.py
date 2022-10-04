@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect,get_object_or_404
 from django.urls import reverse
 from django.http import HttpResponse,HttpResponseRedirect, JsonResponse
 from .models import *
-#from .forms import *
+from .forms import *
 from datetime import datetime
 from datetime import date, timedelta
 from django.contrib import messages
@@ -53,7 +53,24 @@ def logout_view(request):
     return redirect('login')
  
 def sign_upPage(request):
-    return render(request, 'sign_up.html')
+    context ={}
+    alluser = User.objects.all
+    if request.POST:
+        form = RegisterForm(request.POST,initial={'is_student': True})
+        if form.is_valid():
+            x = form.save()
+            email = form.cleaned_data.get('email')
+            raw_password = form.cleaned_data.get('password1')
+            CustomUsers = authenticate(email=email,password=raw_password)
+            CustomUsers.save()
+            messages.success(request, "Student account has been successfully created.")
+            return redirect('login')
+        else:
+            context['register'] = form
+    else:
+        form = RegisterForm(initial={'is_student': True})
+        context['register'] = form
+    return render(request, 'sign_up.html', context)
  
 def evaluation(request):
     return render(request, 'admin/evaluation.html')
@@ -81,3 +98,8 @@ def thankyou(request):
 
 def admin_navbar(request):
     return render(request, 'admin/admin_navbar.html')
+
+def load_slot(request):
+    collegeId = request.GET.get('college_Id')
+    course = Course.objects.filter(college=collegeId)
+    return render(request, 'student/dropdown_option.html', {'course': course})
