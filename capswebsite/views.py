@@ -31,7 +31,7 @@ def survey_question(request):
     return render(request, 'student/survey_question.html')
 
 def student_navbar(request):
-    return render(request, 'student/student-navbar.html')
+    return render(request, 'student/student_navbar.html')
 
 def thankyou(request):
     return render(request, 'student/thankyou.html')
