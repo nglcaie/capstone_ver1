@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
     <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <div class="nav-bar-2-right"></div>
             <ul>
                 <li><a href="{% url 'evaluation' %}"> Evaluation </a></li>
-                <li><a href="{% url 'student_answer' %}"> Students' Answers </a></li>
+                <li><a href="{% url 'student_list' %}"> Students' Answers </a></li>
             </ul>
 
             <a href="{% url 'logout' %}">

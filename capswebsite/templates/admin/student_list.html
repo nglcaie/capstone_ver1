@@ -1,0 +1,65 @@
+{% load static %}
+
+{% include 'admin/admin_navbar.html' %}
+
+<style>
+    .date-time {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        color: #404040;
+        text-align: right;
+        margin-right: 2em;
+    }
+    
+    .centered-div{
+        background-color: yellow;
+        margin: 7% 10%;
+        min-height: 270px;
+    }
+
+    input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 0px;
+    background: #f6f6f6;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    }
+    
+    .search-container button {
+    padding: 6px 10px;
+    background: #f6f6f6;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    color: gray;
+    }
+
+    .search-container button:hover {
+    background: #ccc;
+    }
+</style>
+
+{% block content %}
+
+<p class="date-time">Today is {date} {time}</p>
+
+<div class="centered-div">
+    <div class="top-row">
+        <div class="search-container">
+            <form action="#">
+              <input type="text" placeholder="Search" name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    Student Answers
+</div>
+
+{% endblock %}

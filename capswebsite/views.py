@@ -59,7 +59,7 @@ def evaluation(request):
     return render(request, 'admin/evaluation.html')
  
 def student_list(request):
-    return render(request, 'admin/student_lists.html')
+    return render(request, 'admin/student_list.html')
  
 def student_answer(request):
     return render(request, 'admin/student_answer.html')
