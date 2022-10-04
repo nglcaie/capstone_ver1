@@ -1,4 +1,23 @@
 {% load static %}
 
 {% include 'admin/admin_navbar.html' %}
-Student Lists
+
+<style>
+    .date-time {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        color: #404040;
+        text-align: right;
+        margin-right: 2em;
+    }
+</style>
+
+{% block content %}
+
+<p class="date-time">Today is {date} {time}</p>
+
+Students' List
+
+{% endblock %}
