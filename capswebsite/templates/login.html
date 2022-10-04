@@ -49,6 +49,8 @@
         font-size: 32px;
         line-height: 39px;
         text-align: center;
+        margin-top: 0.7em;
+        margin-bottom: 0.9em;
 
         color: #404040;
     }
@@ -183,7 +185,7 @@
             {% csrf_token %}
 
             <input type="tel" id="lname" name="username" placeholder="Student No. (Ex. 201900000)"><br>
-            <input type="password" id="college" name="password" placeholder="Password"><br>
+            <input type="password" id="college" name="password" placeholder="Password"><br><br>
         
         <p class="sign-up" style="color: #8F8F8F;"> Don't have an account? <a href="{% url 'sign_up' %}"> Sign up </a></p>
         <a href="{% url 'start_survey' %}">
