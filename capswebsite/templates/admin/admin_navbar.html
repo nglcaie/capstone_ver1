@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
-    <link rel="stylesheet" href="{% static '/css/student-navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="nav-bar-2-right"></div>
             <ul>
                 <li><a href="{% url 'start_survey' %}"> Evaluation </a></li>
-                <li><a href="{% url 'answer_summary' %}"> Summary of Answers </a></li>
+                <li><a href="{% url 'answer_summary' %}"> Students' Answers </a></li>
             </ul>
 
             <a href="{% url 'index' %}">

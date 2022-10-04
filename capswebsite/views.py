@@ -35,3 +35,6 @@ def student_navbar(request):
 
 def thankyou(request):
     return render(request, 'student/thankyou.html')
+
+def admin_navbar(request):
+    return render(request, 'admin/admin_navbar.html')

@@ -15,5 +15,6 @@ urlpatterns = [
     path('start_survey',views.start_survey, name="start_survey"),
     path('survey_question',views.survey_question, name="survey_question"),
     path('student_navbar',views.student_navbar, name="student_navbar"),
-    path('thankyou',views.thankyou, name="thankyou")
+    path('thankyou',views.thankyou, name="thankyou"),
+    path('admin_navbar',views.admin_navbar, name="admin_navbar")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
