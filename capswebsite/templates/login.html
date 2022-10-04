@@ -174,14 +174,23 @@
     <div class="container-login">
         <br>
         <p class="text-em"> LOGIN </p>
-        <form>
-            <input type="tel" id="lname" name="lname" placeholder="Student No. (Ex. 201900000)"><br>
-            <input type="password" id="college" name="college" placeholder="Password"><br>
-        </form>
+        <p class="error">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </p>
+        <form method="POST">
+            {% csrf_token %}
 
+            <input type="tel" id="lname" name="username" placeholder="Student No. (Ex. 201900000)"><br>
+            <input type="password" id="college" name="password" placeholder="Password"><br>
+        
         <p class="sign-up" style="color: #8F8F8F;"> Don't have an account? <a href="{% url 'sign_up' %}"> Sign up </a></p>
         <a href="{% url 'start_survey' %}">
-            <button class="btn btn-primary btn-lg">LOG IN</button>
+            <button class="btn btn-primary btn-lg" type="submit">LOG IN</button>
+
+        </form>
+
         </a>
 
     </div>
