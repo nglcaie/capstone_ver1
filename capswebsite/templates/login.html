@@ -133,6 +133,9 @@
         text-decoration: none;
         color: #42CBCE;
     }
+    a:hover {
+    text-decoration: underline;
+    } 
 
     .blue-pill{
         margin-left: 243px;
@@ -176,7 +179,7 @@
             <input type="password" id="college" name="college" placeholder="Password"><br>
         </form>
 
-        <p class="sign-up" style="color: #8F8F8F;"> Don't have an account? <a href="{% url 'sign_up' %}"> Sign up here </a></p>
+        <p class="sign-up" style="color: #8F8F8F;"> Don't have an account? <a href="{% url 'sign_up' %}"> Sign up </a></p>
         <a href="{% url 'start_survey' %}">
             <button class="btn btn-primary btn-lg">LOG IN</button>
         </a>

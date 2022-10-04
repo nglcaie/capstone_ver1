@@ -120,9 +120,12 @@
         font-size: 13px;
         line-height: 15px;
     }
-    a{
+    a {
         text-decoration: none;
         color: #42CBCE;
+    }
+    a:hover {
+    text-decoration: underline;
     }
 
 
@@ -188,7 +191,7 @@
             <a href="{% url 'login' %}">
                 <button class="btn btn-primary btn-lg">LOG IN</button>
             </a>
-            <p class="sign-up"> Don’t have an account? <a href="{% url 'sign_up' %}"> Sign up here</a></p>            
+            <p class="sign-up"> Don’t have an account? <a href="{% url 'sign_up' %}"> Sign up </a></p>            
         </div>
 
         
