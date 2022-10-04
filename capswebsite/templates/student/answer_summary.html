@@ -56,33 +56,9 @@
         margin-right: auto;
     }
 
-    .submit-btn {
-        width: 200px;
-        height: 45px;
-        color: white;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-
-        background: #42CBCE;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-        margin: auto;
-        display: block;
-    }
-
-    .submit-btn:hover {
-        background-color: #92C4C6;
-    }
-
-    a{
-        text-decoration: none;
-        color: #42CBCE;
-    }
 </style>
+
+{% block content %}
 
 <div class="title">Answer Summary</div>
     <form action="#">
@@ -155,3 +131,5 @@
 </div>
 
 <br><br><br><br>
+
+{% endblock %}

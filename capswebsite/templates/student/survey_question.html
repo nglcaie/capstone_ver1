@@ -83,6 +83,8 @@
     }
 </style>
 
+{% block content%}
+
 <div class="title">Survey Questionnaire</div>
     <form action="#">
 
@@ -163,3 +165,4 @@
 
 
 <a href="{% url 'thankyou' %}">submit</a>
+{% endblock}
