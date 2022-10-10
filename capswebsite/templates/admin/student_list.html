@@ -150,97 +150,17 @@
         </thead>
 
         <tbody>
+            {% for students in stud %}
         <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.numberID}} </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.lastName}}, {{students.firstName}} </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.year}} </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.block}} </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.college}} </a></td>
+            <td><a href="{% url 'student_answer' students.id %}"> {{students.course}} </a></td>
         </tr>
+        {%endfor%}
 
-        <!-- DELETE THIS PAG MAY LOOP NA -->
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'student_answer' %}"> 2019-00000 </a></td>
-            <td><a href="{% url 'student_answer' %}"> Dela Cruz, Juan F. </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> 1 </a></td>
-            <td><a href="{% url 'student_answer' %}"> College of Engineering and Technology </a></td>
-            <td><a href="{% url 'student_answer' %}"> Information Technology </a></td>
-        </tr>
-        <!-- DELETE -->
         </tbody>
     </table>
 </div>

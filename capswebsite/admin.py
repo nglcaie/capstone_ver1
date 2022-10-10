@@ -6,7 +6,7 @@ from .models import *
  
 # Register your models here.
 class UserAdmin(UserAdmin):
-    list_display = ('pk','email','numberID','date_of_inactive','is_active','is_admin','is_student','date_joined','last_login')
+    list_display = ('pk','email','numberID','date_of_inactive','is_active','is_admin','is_student','has_answer','date_joined','last_login')
     search_fields = ('email','numberID','college','course','year','block',)
     readonly_fields = ('date_joined','last_login')
     ordering = ('pk',)
@@ -14,7 +14,7 @@ class UserAdmin(UserAdmin):
     list_filter = ('is_active','is_student','is_admin','college','course','year')
     fieldsets = (
         (None, {'fields': ('email', 'password','numberID','college','course','year','block')}),
-        ('Permissions', {'fields': ('is_active','date_of_inactive','is_admin','is_student')}),
+        ('Permissions', {'fields': ('is_active','date_of_inactive','is_admin','is_student','has_answer')}),
     )
     add_fieldsets = (
         (None, {
@@ -42,4 +42,5 @@ class CourseAdmin(admin.ModelAdmin):
 admin.site.register(User,UserAdmin)
 admin.site.register(College,CollegeAdmin)
 admin.site.register(Course,CourseAdmin)
+admin.site.register(Answers)
 admin.site.unregister(Group)

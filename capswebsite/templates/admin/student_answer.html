@@ -72,72 +72,75 @@
 
 <p class="date-time">Today is {date} {time}</p>
 
-    <!-- Question 1 -->
-    <div class="qna"> 
+<div class="title">Answer Summary</div>
+        {% for ans in answers %}
+        <!-- Question 1 -->
+        <div class="qna"> 
+            
+            <span>Question #1</span>
+            <br><br>
+            1. How does your environment affect your studying?
+            <br><br><br><br>
+            
+            <label for="answer"><b>Answer:</b></label>
+            <br><br>
+            {{ans.question1}}
+        </div>
         
-        <span>Question #1</span>
-        <br><br>
-        1. How does your environment affect your studying?
-        <br><br><br><br>
-        
-        <label for="answer"><b>Answer:</b></label>
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
-    </div>
-    
-    <!-- Question 2 -->
-    <div class="qna"> 
-        
-        <span>Question #2</span>
-        <br><br>
-        2. How do you feel about the workload that is given to you during online classes?
-        <br><br><br><br>
-        
-        <label for="answer"><b>Answer:</b></label>
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
-    </div>
+        <!-- Question 2 -->
+        <div class="qna"> 
+            
+            <span>Question #2</span>
+            <br><br>
+            2. How do you feel about the workload that is given to you during online classes?
+            <br><br><br><br>
+            
+            <label for="answer"><b>Answer:</b></label>
+            <br><br>
+            {{ans.question2}}
+        </div>
+        <!-- Question 3 -->
+        <div class="qna"> 
+            
+            <span>Question #3</span>
+            <br><br>
+            3. What can you say about your physical health in relation to online learning? (Sleep quality, physical activity, feelings of mental or physical fatigue, etc.)
+            <br><br><br><br>
+            
+            <label for="answer"><b>Answer:</b></label>
+            <br><br>
+            {{ans.question3}}
+        </div>
 
-    <!-- Question 3 -->
-    <div class="qna"> 
-        
-        <span>Question #3</span>
-        <br><br>
-        3. What can you say about your physical health in relation to online learning? (Sleep quality, physical activity, feelings of mental or physical fatigue, etc.)
-        <br><br><br><br>
-        
-        <label for="answer"><b>Answer:</b></label>
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
-    </div>
+        <!-- Question 4 -->
+        <div class="qna"> 
+            
+            <span>Question #4</span>
+            <br><br>
+            4. Can you say that your motivation decreased in an online set-up? If yes, how?
+            <br><br><br><br>
+            
+            <label for="answer"><b>Answer:</b></label>
+            <br><br>
+            {{ans.question4}}
+        </div>
 
-    <!-- Question 4 -->
-    <div class="qna"> 
+        <!-- Question 5 -->
+        <div class="qna"> 
+            
+            <span>Question #5</span>
+            <br><br>
+            5. How do you think your socioeconomic status affects your mental health during online class?
+            <br><br><br><br>
+            
+            <label for="answer"><b>Answer:</b></label>
+            <br><br>
+            {{ans.question5}}
+        </td>
+        </div>
         
-        <span>Question #4</span>
-        <br><br>
-        4. Can you say that your motivation decreased in an online set-up? If yes, how?
-        <br><br><br><br>
-        
-        <label for="answer"><b>Answer:</b></label>
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
-    </div>
-
-    <!-- Question 5 -->
-    <div class="qna"> 
-        
-        <span>Question #5</span>
-        <br><br>
-        5. How do you think your socioeconomic status affects your mental health during online class?
-        <br><br><br><br>
-        
-        <label for="answer"><b>Answer:</b></label>
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
-    </div>
-
-
+</div>
+{%endfor%}
 <br><br><br><br>
 
 {% endblock %}

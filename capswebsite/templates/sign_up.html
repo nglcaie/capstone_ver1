@@ -16,7 +16,7 @@
         min-height: 100vh;
         max-width: 400px;
         line-height: 150%;
-        overflow: hidden;
+        overflow-x: hidden;
 
         background: linear-gradient(136.95deg, #FCFBFE 46.14%, #D8F2F2 88.42%);
     }
@@ -53,7 +53,7 @@
         color: #404040;
     }
 
-    input[type=text] {
+    .form-control {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -71,7 +71,30 @@
         border-radius: 5px;
         border: none;
         color: #8F8F8F;
+
+        color: #404040;
     }
+
+    .form-control1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        box-sizing: border-box;
+        margin-left: 60px;
+        padding: 0px 20px;
+        width: 282.43px;
+        height: 28px;
+
+
+        background: #D9D9D9;
+        border-radius: 5px;
+        border: none;
+        color: #8F8F8F;
+    }   
+
 
     input[type=tel] {
         font-family: 'Inter';
@@ -187,6 +210,22 @@
             <label class="error">
                 {{register.numberID.errors}}<br>
             </label>
+            {{register.firstName}} <br>
+            <label class="error">
+                {{register.firstName.errors}}<br>
+            </label>
+            {{register.lastName}} <br>
+            <label class="error">
+                {{register.lastName.errors}}<br>
+            </label>
+            {{register.password1}} <br>
+            <label class="error">
+                {{register.password1.errors}}<br>
+            </label>
+            {{register.password2}} <br>
+            <label class="error">
+                {{register.password2.errors}}<br>
+            </label>
             {{register.college}} <br>
             <label class="error">
                 {{register.college.errors}}<br>
@@ -203,15 +242,8 @@
             <label class="error">
                 {{register.block.errors}}<br>
             </label>
-            {{register.password1}} <br>
-            <label class="error">
-                {{register.password1.errors}}<br>
-            </label>
-            {{register.password2}} <br>
-            <label class="error">
-                {{register.password2.errors}}<br>
-            </label>
-            {{register.is_student}}  <br>
+
+             {{register.is_student}}  <!-- do not remove -->
         <br>
         <p class="sign-up" style="color: #8F8F8F;"> Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
             <button class="btn btn-primary btn-lg" type="submit">REGISTER</button>

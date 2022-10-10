@@ -61,8 +61,7 @@
 {% block content %}
 
 <div class="title">Answer Summary</div>
-    <form action="#">
-
+        {% for ans in answers %}
         <!-- Question 1 -->
         <div class="qna"> 
             
@@ -73,7 +72,7 @@
             
             <label for="answer"><b>Answer:</b></label>
             <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
+            {{ans.question1}}
         </div>
         
         <!-- Question 2 -->
@@ -86,9 +85,8 @@
             
             <label for="answer"><b>Answer:</b></label>
             <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
+            {{ans.question2}}
         </div>
-
         <!-- Question 3 -->
         <div class="qna"> 
             
@@ -99,7 +97,7 @@
             
             <label for="answer"><b>Answer:</b></label>
             <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
+            {{ans.question3}}
         </div>
 
         <!-- Question 4 -->
@@ -112,7 +110,7 @@
             
             <label for="answer"><b>Answer:</b></label>
             <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
+            {{ans.question4}}
         </div>
 
         <!-- Question 5 -->
@@ -125,11 +123,12 @@
             
             <label for="answer"><b>Answer:</b></label>
             <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ante viverra, facilisis massa ut, eleifend magna. Sed quam ex, bibendum non pellentesque sit amet, rhoncus ut urna. Fusce pretium fermentum mi interdum dictum. Nam eros dolor, tristique quis facilisis a, interdum a mauris. 
+            {{ans.question5}}
+        </td>
         </div>
-    </form>
+        
 </div>
-
+{%endfor%}
 <br><br><br><br>
 
 {% endblock %}

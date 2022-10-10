@@ -72,26 +72,48 @@ def sign_upPage(request):
         context['register'] = form
     return render(request, 'sign_up.html', context)
  
-def evaluation(request):
-    return render(request, 'admin/evaluation.html')
- 
-def student_list(request):
-    return render(request, 'admin/student_list.html')
- 
-def student_answer(request):
-    return render(request, 'admin/student_answer.html')
+def student_navbar(request):
+    user = request.user.id
+    student = User.objects.get(id=user)
+    print(student)
+    context = {'student':student}
+    return render(request, 'student/student_navbar.html',context)
  
 def answer_summary(request):
-    return render(request, 'student/answer_summary.html')
+    context ={}
+    user = request.user.id
+    if Answers.objects.filter(student=user).exists():
+        answers = Answers.objects.filter(student=user)
+        context['answers'] = answers
+    else:
+        return redirect('start_survey')
+    return render(request, 'student/answer_summary.html', context)
  
 def start_survey(request):
-    return render(request, 'student/start_survey.html')
+    user = request.user.id
+    if Answers.objects.filter(student=user).exists():
+        return redirect('thankyou')
+    else:
+        return render(request, 'student/start_survey.html')
  
 def survey_question(request):
-    return render(request, 'student/survey_question.html')
- 
-def student_navbar(request):
-    return render(request, 'student/student-navbar.html')
+    context ={}
+    alluser = User.objects.all
+    user = request.user.id
+    gets = User.objects.get(id=user)
+    if request.POST:
+        form = AnswerForm(request.POST,initial={'student': user})
+        if form.is_valid():
+            x = form.save()
+            gets.has_answer = 1
+            gets.save()
+            return redirect('thankyou')
+        else:
+            context['register'] = form
+    else:
+        form = AnswerForm(initial={'student': user})
+        context['register'] = form
+    return render(request, 'student/survey_question.html', context)
  
 def thankyou(request):
     return render(request, 'student/thankyou.html')
@@ -99,6 +121,21 @@ def thankyou(request):
 def admin_navbar(request):
     return render(request, 'admin/admin_navbar.html')
 
+def evaluation(request):
+    return render(request, 'admin/evaluation.html')
+ 
+def student_list(request):
+    ans = Answers.objects.all()
+    print(ans)
+    stud = User.objects.filter(is_student=True, has_answer=True)
+    context = {'stud':stud}
+    return render(request,'admin/student_list.html', context)
+    
+def student_answer(request, pk):
+    answers = Answers.objects.filter(id=pk)
+    context = {'answers':answers}
+    return render(request, 'admin/student_answer.html', context)
+ 
 def load_slot(request):
     collegeId = request.GET.get('college_Id')
     course = Course.objects.filter(college=collegeId)

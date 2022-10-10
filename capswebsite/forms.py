@@ -16,7 +16,7 @@ class DateInput(forms.DateInput):
 class RegisterForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ('email','numberID','college','course','year','block','password1','password2','is_student')
+        fields = ('email','numberID','college','course','year','block','password1','password2','is_student','firstName','lastName')
         widgets = {
         'is_student': forms.HiddenInput(),
      }
@@ -24,16 +24,20 @@ class RegisterForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields["email"].widget.attrs.update(
             {'required': True, 'name': 'email', 'id': 'email', 'type': 'text', 'class': 'form-control', 'placeholder': 'Email'})
+        self.fields["firstName"].widget.attrs.update(
+            {'required': True, 'name': 'firstName', 'id': 'firstName', 'type': 'text', 'class': 'form-control', 'placeholder': 'First Name'})
+        self.fields["lastName"].widget.attrs.update(
+            {'required': True, 'name': 'lastName', 'id': 'firstName', 'type': 'text', 'class': 'form-control', 'placeholder': 'Last Name'})
         self.fields["numberID"].widget.attrs.update(
             {'required': True, 'name': 'numberID', 'id': 'numberID', 'class': 'form-control', 'placeholder': 'Student Number'})
         self.fields["college"].widget.attrs.update(
-            {'required': True, 'name': 'college', 'id': 'college', 'class': 'form-control', 'placeholder': 'College'})
+            {'required': True, 'name': 'college', 'id': 'college', 'class': 'form-control1', 'placeholder': 'College'})
         self.fields["course"].widget.attrs.update(
-            {'required': True, 'name': 'course', 'id': 'course', 'class': 'form-control', 'placeholder': 'Course'})
+            {'required': True, 'name': 'course', 'id': 'course', 'class': 'form-control1', 'placeholder': 'Course'})
         self.fields["year"].widget.attrs.update(
-            {'required': True, 'name': 'year', 'id': 'year', 'class': 'form-control', 'placeholder': 'Year'})
+            {'required': True, 'name': 'year', 'id': 'year', 'class': 'form-control1', 'placeholder': 'Year'})
         self.fields["block"].widget.attrs.update(
-            {'required': True, 'name': 'block', 'id': 'block', 'class': 'form-control', 'placeholder': 'Block'})
+            {'required': True, 'name': 'block', 'id': 'block', 'class': 'form-control1', 'placeholder': 'Block'})
         self.fields["password1"].widget.attrs.update(
             {'required': True, 'name': 'password1', 'id': 'password1', 'type': 'password', 'class': 'form-control', 'placeholder': 'Password'})
         self.fields["password2"].widget.attrs.update(
@@ -49,4 +53,20 @@ class RegisterForm(UserCreationForm):
             self.fields['course'].queryset = self.instance.college.course_set.order_by('college')
 
 
+class AnswerForm(forms.ModelForm):
+    class Meta:
+        model = Answers
+        fields = ('student','question1','question2','question3','question4','question5')
+        widgets = {
+        'student': forms.HiddenInput(),
+     }
+    question1 = forms.CharField(widget=forms.Textarea,required=False)
+    question2 = forms.CharField(widget=forms.Textarea,required=False)
+    question3 = forms.CharField(widget=forms.Textarea,required=False)
+    question4 = forms.CharField(widget=forms.Textarea,required=False)
+    question5 = forms.CharField(widget=forms.Textarea,required=False)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["question1"].widget.attrs.update(
+            {'required': True, 'name': 'question1', 'id': 'question1', 'type': 'text', 'class': 'form-control', 'placeholder': 'Share your experience','required minlength':'20'})
 
