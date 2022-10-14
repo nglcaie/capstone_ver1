@@ -31,7 +31,6 @@ body{
 .hello{
     margin: 0%;
     padding-left: 1em;
-    padding-right: 19em;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -41,7 +40,8 @@ body{
 }
 
 .nav-bar-2-right{
-    float: right;
+    margin-left: auto; 
+    margin-right: 0;
 }
 
 ul{
@@ -79,7 +79,8 @@ li a {
     display: inline-block;
     
     margin: 2px;
-    margin-left: 4em;
+    margin-left: 2em;
+    margin-right: 1.5em;
     cursor: pointer;
     font-family: 'Inter';
     font-style: normal;

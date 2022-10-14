@@ -62,7 +62,7 @@
 
         width: 282.43px;
         height: 28px;
-        padding: 12px 20px;
+        padding: 12px 15px;
         margin: 8px 0;
         box-sizing: border-box;
         margin-left: 60px;
@@ -171,6 +171,20 @@
         margin-top: 76.54px;
     }
 
+    label{
+        display: block;
+        margin-left: 75px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+
+        color: #8F8F8F;
+    }
+
 
 
 </style>
@@ -202,10 +216,12 @@
         {% endfor %}        
         <form method="post" id="personForm" data-cities-url="{% url 'ajax_load_slot' %}">
             {% csrf_token %}
+            <label>Email</label>
             {{register.email}}  <br>
             <label class="error">
-                {{register.email.errors}}<br>
+                {{register.email.errors}}
             </label>
+            <label>Student Number</label>
             {{register.numberID}} <br>
             <label class="error">
                 {{register.numberID.errors}}<br>
