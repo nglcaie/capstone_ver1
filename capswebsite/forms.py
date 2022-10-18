@@ -37,7 +37,7 @@ class RegisterForm(UserCreationForm):
         self.fields["year"].widget.attrs.update(
             {'required': True, 'name': 'year', 'id': 'year', 'class': 'form-control1', 'placeholder': 'Year'})
         self.fields["block"].widget.attrs.update(
-            {'required': True, 'name': 'block', 'id': 'block', 'class': 'form-control1', 'placeholder': 'Block'})
+            {'required': True, 'name': 'block', 'id': 'block', 'class': 'form-control1blk', 'placeholder': 'Block'})
         self.fields["password1"].widget.attrs.update(
             {'required': True, 'name': 'password1', 'id': 'password1', 'type': 'password', 'class': 'form-control', 'placeholder': 'Password'})
         self.fields["password2"].widget.attrs.update(
