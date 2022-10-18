@@ -32,8 +32,8 @@
 
     .container-login {
         width: 400px;
-        height:  952px;
-        margin-top: -496px;
+        height:  970px;
+        margin-top: -472px;
         margin-left: 500px;
         background: #FFFFFF;
         box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.1);
@@ -83,6 +83,7 @@
         line-height: 17px;
 
         box-sizing: border-box;
+        margin: 8px 0;
         margin-left: 60px;
         padding: 0px 20px;
         width: 282.43px;
@@ -95,6 +96,26 @@
         color: #8F8F8F;
     }   
 
+    .form-control1blk {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        box-sizing: border-box;
+        margin: 8px 0;
+        margin-left: 60px;
+        padding: 0px 25px;
+        width: 282.43px;
+        height: 28px;
+
+
+        background: #D9D9D9;
+        border-radius: 5px;
+        border: none;
+        color: #8F8F8F;
+    }
 
     input[type=tel] {
         font-family: 'Inter';
@@ -225,20 +246,24 @@
             <label>Student Number</label>
             {{register.numberID}} <br>
             <label class="error">
-                {{register.numberID.errors}} <br>
+                {{register.numberID.errors}} 
             </label>
+            <label>First Name</label>
             {{register.firstName}} <br>
             <label class="error">
-                {{register.firstName.errors}} <br>
+                {{register.firstName.errors}}
             </label>
+            <label>Last Name</label>
             {{register.lastName}} <br>
             <label class="error">
-                {{register.lastName.errors}} <br>
+                {{register.lastName.errors}}
             </label>
+            <label>Password</label>
             {{register.password1}} <br>
             <label class="error">
-                {{register.password1.errors}} <br>
+                {{register.password1.errors}}
             </label>
+            <label>Confirm Password</label>
             {{register.password2}} <br>
             <label class="error">
                 {{register.password2.errors}} <br><br>
@@ -247,24 +272,24 @@
             <label>College</label>
             {{register.college}} <br>
             <label class="error">
-                {{register.college.errors}}<br>
+                {{register.college.errors}}
             </label>
 
             <label>Program</label>
             {{register.course}} <br>
             <label class="error">
-                {{register.course.errors}}<br>
+                {{register.course.errors}}
             </label>
 
             <label>Year</label>
             {{register.year}} <br>
             <label class="error">
-                {{register.year.errors}}<br>
+                {{register.year.errors}}
             </label>
-
+            <label>Block</label>
             {{register.block}} <br>
             <label class="error">
-                {{register.block.errors}}<br>
+                {{register.block.errors}}
             </label>
 
              {{register.is_student}}  <!-- do not remove -->
