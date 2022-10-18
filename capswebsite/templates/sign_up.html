@@ -32,7 +32,7 @@
 
     .container-login {
         width: 400px;
-        height: 427px;
+        height:  952px;
         margin-top: -496px;
         margin-left: 500px;
         background: #FFFFFF;
@@ -178,7 +178,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 17px;
+        line-height: 24px;
         display: flex;
         align-items: center;
 
@@ -221,39 +221,47 @@
             <label class="error">
                 {{register.email.errors}}
             </label>
+
             <label>Student Number</label>
             {{register.numberID}} <br>
             <label class="error">
-                {{register.numberID.errors}}<br>
+                {{register.numberID.errors}} <br>
             </label>
             {{register.firstName}} <br>
             <label class="error">
-                {{register.firstName.errors}}<br>
+                {{register.firstName.errors}} <br>
             </label>
             {{register.lastName}} <br>
             <label class="error">
-                {{register.lastName.errors}}<br>
+                {{register.lastName.errors}} <br>
             </label>
             {{register.password1}} <br>
             <label class="error">
-                {{register.password1.errors}}<br>
+                {{register.password1.errors}} <br>
             </label>
             {{register.password2}} <br>
             <label class="error">
-                {{register.password2.errors}}<br>
+                {{register.password2.errors}} <br><br>
             </label>
+
+            <label>College</label>
             {{register.college}} <br>
             <label class="error">
                 {{register.college.errors}}<br>
             </label>
+
+            <label>Program</label>
             {{register.course}} <br>
             <label class="error">
                 {{register.course.errors}}<br>
             </label>
+
+            <label>Year</label>
             {{register.year}} <br>
             <label class="error">
                 {{register.year.errors}}<br>
             </label>
+
             {{register.block}} <br>
             <label class="error">
                 {{register.block.errors}}<br>
@@ -265,6 +273,8 @@
             <button class="btn btn-primary btn-lg" type="submit">REGISTER</button>
     </form>
     </div>
+    <br>]
+    <br>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
