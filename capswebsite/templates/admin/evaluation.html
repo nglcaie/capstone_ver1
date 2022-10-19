@@ -59,10 +59,11 @@
     .visualization{
         background-color: #f6f6f6;
         width:100%;
-        height: 317px;
+        height: auto;
         display: flex;
         place-items: center;
         place-content: center;
+        padding:15px;
     }
 
 
@@ -81,7 +82,10 @@
             <br><br><br>
             
             <div class="visualization">
-                Visual Representation
+                {% for topic in topics %}
+                {{topic}}<br><br><br>
+                {%endfor%}
+                
             </div>
         </div>
         
